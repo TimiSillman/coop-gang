@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
 import { DiscordBotModule } from './discord-bot/discord-bot.module'
+import { SteamModule } from './steam/steam.module'
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { DiscordBotModule } from './discord-bot/discord-bot.module'
       isGlobal: true,
     }),
     DiscordBotModule,
+    SteamModule,
   ],
   controllers: [AppController],
   providers: [AppService],
